@@ -33,10 +33,10 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name == null ? "Name" : variables.name} ${
-    variables.lastName
-  }</h1>
-          <h2>Web Developer</h2>
+          <h1>${variables.name == null ? "Your" : variables.name} ${
+    variables.lastName == null ? "Name" : variables.lastName
+  } </h1>
+          <h2>${variables.role == null ? "Web Developer" : variables.role}</h2>
           <h3>Miami, USA</h3>
           <ul class="position-right">
             <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
@@ -56,9 +56,11 @@ window.onload = function() {
     // if includeCover is true the algorithm should show the cover image
     includeCover: true,
     // this is the image's url that will be used as a background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://wallpapers.com/images/hd/1920x1080-motorcycle-red-black-blue-hlfwttk04g7l0h0j.jpg",
     // this is the url for the profile avatar
-    avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
+    avatarURL:
+      "https://lh3.googleusercontent.com/a/ACg8ocKXXbcGP9-O_XKNUaJBUqyNKMZDY_EeKY8CLmecsCNCLxyj0CRnrA=s288-c-no",
     // social media bar position (left or right)
     socialMediaPosition: "position-left",
     // social media usernames
