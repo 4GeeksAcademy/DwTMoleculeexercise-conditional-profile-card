@@ -33,16 +33,30 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>${variables.name == null ? "Your" : variables.name} ${
-    variables.lastName == null ? "Name" : variables.lastName
+          <h1>${variables.name == null ? "Matias" : variables.name} ${
+    variables.lastName == null ? "Sanhueza" : variables.lastName
   } </h1>
           <h2>${variables.role == null ? "Web Developer" : variables.role}</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
+          <h3>${variables.city == null ? "Santiago" : variables.city}, ${
+    variables.country == null ? "Chile" : variables.country
+  }</h3>
+          <ul class=${
+            variables.socialMediaPosition == null
+              ? "left"
+              : variables.socialMediaPosition
+          }>
+            <li><a href="https://twitter.com/${
+              variables.twitter == null ? "4Geeksacademy" : variables.twitter
+            }"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${
+              variables.github == null ? "4Geeksacademy" : variables.github
+            }"><i class="fab fa-github"></i></a></li>
             <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://instagram.com/${
+              variables.instagram == null
+                ? "4Geeksacademy"
+                : variables.instagram
+            }"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
