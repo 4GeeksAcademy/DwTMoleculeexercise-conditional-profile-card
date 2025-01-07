@@ -51,7 +51,9 @@ function render(variables = {}) {
             <li><a href="https://github.com/${
               variables.github == null ? "4Geeksacademy" : variables.github
             }"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/school/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://linkedin.com/school/ ${
+              variables.linkedin == null ? "4Geeksacademy" : variables.linkedin
+            }"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://instagram.com/${
               variables.instagram == null
                 ? "4Geeksacademy"
